@@ -222,7 +222,7 @@ namespace iep.Controllers
                         db.Entry(u).State = EntityState.Modified;
                         db.SaveChanges();
                         transaction.Commit();
-                        //sendMail(u.Email);
+                        sendMail(u.Email);
                         log.Info("Token order succeeded " + order.User.Email + "num " + order.TokensAmount);
                     }
                     catch (Exception e)
